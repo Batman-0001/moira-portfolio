@@ -5,53 +5,31 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-purple-50 text-gray-900 font-body antialiased;
-  }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-cream text-ink font-body antialiased; }
 }
 
 @layer components {
-  .brutal-border {
-    @apply border-2 border-gray-900;
-  }
-  .brutal-border-4 {
-    @apply border-4 border-gray-900;
-  }
+  .brutal-border   { @apply border-2 border-ink; }
+  .brutal-border-4 { @apply border-4 border-ink; }
+
   .brutal-card {
-    @apply border-2 border-gray-900 bg-white shadow-brutal transition-all duration-200;
+    @apply border-2 border-ink bg-white shadow-brutal transition-all duration-200;
   }
   .brutal-card:hover {
     @apply -translate-x-1 -translate-y-1 shadow-brutal-lg;
   }
+
   .brutal-btn {
-    @apply border-2 border-gray-900 px-6 py-3 font-display font-bold uppercase tracking-wide shadow-brutal transition-all duration-150 active:translate-x-1 active:translate-y-1 active:shadow-none;
+    @apply border-2 border-ink px-6 py-3 font-display font-bold uppercase tracking-wide
+           shadow-brutal transition-all duration-150
+           active:translate-x-1 active:translate-y-1 active:shadow-none;
   }
   .brutal-btn:hover {
     @apply -translate-x-0.5 -translate-y-0.5 shadow-brutal-lg;
   }
 }
 
-@layer utilities {
-  .text-stroke {
-    -webkit-text-stroke: 2px #1a1a1a;
-  }
-  .parallax-bg {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 14px;
-}
-::-webkit-scrollbar-track {
-  background: #f3e8ff;
-}
-::-webkit-scrollbar-thumb {
-  background: #9333ea;
-  border: 2px solid #1a1a1a;
-}
+::-webkit-scrollbar       { width: 14px; }
+::-webkit-scrollbar-track { background: #FFC8DC; }
+::-webkit-scrollbar-thumb { background: #E55E99; border: 2px solid #1a1a1a; }
